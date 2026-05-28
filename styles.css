@@ -107,6 +107,7 @@ a {
 }
 
 footer {
+    width: 100%;
     background-color: black;
     color: #ffffff;
     text-align: center;
