@@ -67,9 +67,7 @@ li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 5em;
-    padding-left: 1.2em;
-    padding-right: 1.2em;
+    padding: 5em 1.2em 0.8em 1.2em;
 }
 
 .intro h1, .intro p {
