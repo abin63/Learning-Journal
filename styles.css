@@ -6,30 +6,22 @@
 
 .container {
     position: relative;
-    min-width: 480px;
+    width: 100%;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: "Roboto", sans-serif;
-    z-index: 1;
     min-height: 100vh;
     /* padding: 0 1em; */
 }
-
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    filter: blur(8px);
-    z-index: 0;
-}
-
 
 /* Header */
 
 .title {
     display: flex;
+}
+
+.title h3 {
+    font-size: 1.2rem;
 }
 
 nav > ul {
@@ -38,11 +30,11 @@ nav > ul {
 
 nav ul {
     display: flex;
-    gap: 24px;
+    gap: 0.8em;
 }
 
 .logo {
-    margin-right: 4px;
+    margin-right: 0.25em;
 }
 
 header {
@@ -53,7 +45,8 @@ header {
 
 li a {
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 
 /* Introduction */
@@ -68,7 +61,7 @@ li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5em 1.2em 0.8em 1.2em;
+    padding: 5em 1.2em 1.3em 1.2em;
 }
 
 .intro h1, .intro p {
@@ -179,9 +172,165 @@ footer  p:first-of-type {
     margin-bottom: 0.5em;
 }
 
-
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .container {
-        max-width: 1024px;
+        width: 480px;
+    }
+
+    .logo {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .title h3 {
+        font-size: 1.8rem;
+    }
+
+    li a {
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    li a:hover {
+        color: #640D14;
+        text-decoration: underline;
+    }
+
+    li a:active, li a:focus {
+        color: brown;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1.2em;
+    }
+
+    header {
+        padding: 2.5em 3.5em 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #ffffff;
+    }
+
+    .intro {
+        width: 100%;
+        height: 650px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 0 1.5em 1.5em;
+        line-height: 1.5;
+        font-size: 1.4rem;
+        margin-top: 5em;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.2em;
+        flex-wrap: wrap;
+        width: 100%;
+        /* gap: 1em; */
+    }
+
+    .blog {
+        /* flex: 1; */
+        width: calc(33.33% - 1em);
+    }
+
+    .blog > img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .introduction-desc {
+        width: 65%;
+        padding: 3em;
+        margin: 4em 2em 0 3em;
+        font-size: 1.3rem;
+    }
+
+    .introduction-img {
+        display: block;
+        margin: 0 auto;
+        width: 87%;
+        border-radius: 0%;
+}
+
+    .introduction-details {
+        font-size: 1.3rem;
+        width: 80%;
+        margin: 2em auto;
+        line-height: 1.2;
+    }
+
+    .introduction-details  h3 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .introduction-details h3 + p {
+        margin-bottom: 0.5em;
+    }
+
+    .recent-posts {
+        font-size: 1.6rem;
+    }
+
+    .profile {
+        margin: 10em 10em 3em 10em;
+        /* padding: 3em 8em 3em 8em; */
+        display: flex;
+        justify-content:first baseline;
+        align-items: center;
+        gap: 2em;
+    }
+
+    #name {
+        color: #640D14;
+        font-size: 2.5rem;
+    }
+
+    .about-name {
+        width: 80%;
+        margin-bottom: 0.3em;
+    }
+
+    .about-name-desc {
+        width: 60%;
+        font-size: 1.2rem;
+    }
+
+    .about-desc {
+        width: 85%;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        line-height: 1.2;
+    }
+
+    .about-desc h3 {
+        margin-bottom: 1em;
+    }
+
+    .about-desc h3:last-of-type {
+        margin-top: 1em;
+    }
+
+    .about-desc h3 + p {
+        margin-bottom: 0.5em;
     }
 }
