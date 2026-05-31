@@ -270,6 +270,10 @@ footer  p:first-of-type {
         margin-top: 5em;
     }
 
+    .intro-desp {
+        width: 70%;
+    }
+
     .gallery {
         display: flex;
         flex-direction: row;
