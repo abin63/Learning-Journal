@@ -12,6 +12,7 @@
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
     /* padding: 0 1em; */
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -174,12 +175,43 @@ footer  p:first-of-type {
 
 @media (min-width: 481px) and (max-width: 768px) {
     .container {
-        width: 480px;
+        width: 100%;
     }
 
     .logo {
         width: 20px;
         height: 20px;
+    }
+
+    .introduction-details h3 {
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .introduction-details h3 + p {
+        margin-bottom: 0.5em;
+    }
+
+    .introduction-details p {
+        line-height: 1.2;
+    }
+
+    footer {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-desc h3 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .about-desc h3 + p {
+        margin-bottom: 0.5em;
+    }
+
+    .about-desc p, .about-name-desc p {
+        line-height: 1.2;
     }
 }
 
@@ -245,6 +277,7 @@ footer  p:first-of-type {
         flex-wrap: wrap;
         width: 100%;
         /* gap: 1em; */
+        margin-left: 1.5em;
     }
 
     .blog {
